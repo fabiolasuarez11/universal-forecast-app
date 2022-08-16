@@ -1,0 +1,37 @@
+.card {
+	background-color: #caf67e !important;
+}
+
+.card-header,
+.card-footer,
+.main-today {
+	color: #3e4a61 !important;
+	font-family: 'Righteous', cursive;
+}
+
+.main-today {
+	color: #3e4a61;
+	font-family: 'Sarala', sans-serif;
+	font-size: 18px;
+}
+
+.card-header,
+.card-footer {
+	background-color: #afc5ff !important;
+	font-size: 24px;
+}
+
+.fa-droplet {
+	color: #0c9cee;
+	font-size: 20px;
+}
+
+.fa-wind {
+	color: #537791;
+	font-size: 20px;
+}
+
+.alerts {
+	color: #3e4a61;
+	text-decoration: none;
+}

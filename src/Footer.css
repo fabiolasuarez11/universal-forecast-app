@@ -1,0 +1,17 @@
+.main-footer {
+	background-color: #ffe3b0;
+	color: #3e4a61;
+	font-family: 'Righteous', cursive;
+	font-size: 20px;
+	width: 96%;
+}
+
+.repo {
+	color: #3e4a61;
+	text-decoration: none !important;
+}
+
+.repo:hover {
+	color: #0c9cee;
+	text-decoration: none !important;
+}

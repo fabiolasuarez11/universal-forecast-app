@@ -1,0 +1,25 @@
+.card {
+	background-color: #caf67e !important;
+}
+
+.card-header,
+.card-footer {
+	color: #3e4a61 !important;
+	font-family: 'Righteous', cursive;
+}
+
+.week-temp {
+	color: #3e4a61;
+	font-family: 'Sarala', sans-serif;
+	font-size: 18px;
+}
+
+.more-dates {
+	color: #fff;
+	text-decoration: none !important;
+}
+
+.more-dates:hover {
+	color: #000;
+	text-decoration: none !important;
+}
