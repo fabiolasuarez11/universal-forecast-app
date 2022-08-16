@@ -14,7 +14,7 @@ export default function Footer() {
 				</p>
 				<p className="fw-lighter text-center">
 					<a
-						href="https://github.com/fabiolasuarez11/weather-app-shecodes-plus"
+						href="https://github.com/fabiolasuarez11/universal-forecast-app"
 						target="_blank"
 						rel="noreferrer"
 						className="repo"
