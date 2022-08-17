@@ -9,7 +9,7 @@ export default function Header(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
 
 	function handleSubmit(event) {
-		event.preventDefault();
+		// event.preventDefault();
 		handleSearch();
 	}
 
