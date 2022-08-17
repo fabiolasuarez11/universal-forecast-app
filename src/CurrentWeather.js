@@ -1,7 +1,8 @@
 import React from 'react';
+
 import './CurrentWeather.css';
 
-export default function CurrentWeather() {
+export default function CurrentWeather(props) {
 	return (
 		<div className="Current-Weather">
 			<div className="card p-0 border-0 rounded-5">
@@ -10,40 +11,43 @@ export default function CurrentWeather() {
 				</div>
 				<div className="row">
 					<div className="col col-md-6 m-0 p-0">
-						<p className="main-today ps-5 pt-4">City Name</p>
+						<p className="main-today ps-5 pt-4">{props.data.city}</p>
 						<p className="main-today ps-5">
-							<strong className="m-0">0</strong>
+							<strong className="m-0">{props.data.temperature}</strong>
 							<strong>°F</strong>
 						</p>
 						<p className="main-today ps-5  pt-4">
 							Last updated:{' '}
 							<span className="m-0" id="date">
-								Date
+								{/* {props.data.date} */}
 							</span>
 						</p>
-						<p className="main-today ps-5  pt-4" id="description">
-							Weather Condition
+						<p
+							className="main-today ps-5  pt-4 text-capitalize"
+							id="description"
+						>
+							{props.data.description}
 						</p>
 						<img
-							src="https://openweathermap.org/img/wn/01d@2x.png"
-							alt="Weather condition"
+							src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
+							alt={props.data.description}
 							id="icon"
 							className="ps-5 w-80"
 						/>
 					</div>
 					<div className="col col-md-6 m-0 pt-4">
 						<p className="main-today ps-3  pt-4">
-							Max <span className="m-0 ms-1">0</span>° • Min{' '}
-							<span className="m-0 ms-1">0</span>°
+							Max <span className="m-0 ms-1">{props.data.maxTemp}</span>° • Min{' '}
+							<span className="m-0 ms-1">{props.data.minTemp}</span>°
 						</p>
 						<p className="main-today ps-3 pt-4">
 							Humidity:
-							<span className="m-0 ms-3">0</span> %
+							<span className="m-0 ms-3">{props.data.humidity}</span> %
 							<i className="fa-solid fa-droplet m-0 p-2"></i>
 						</p>
 						<p className="main-today ps-3 pt-4">
 							Wind:
-							<span className="m-0 ms-3">0</span> mph
+							<span className="m-0 ms-3">{props.data.wind}</span> mph
 							<i className="fa-solid fa-wind m-0 p-2"></i>
 						</p>
 					</div>

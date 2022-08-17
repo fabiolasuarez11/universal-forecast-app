@@ -1,3 +1,7 @@
+.CurrentWeather {
+	max-width: 1000px;
+}
+
 .card {
 	background-color: #caf67e !important;
 }

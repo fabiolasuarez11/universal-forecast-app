@@ -1,6 +1,6 @@
 .main-header {
 	background-color: #afc5ff;
-	width: 96%;
+	max-width: 1000px;
 }
 
 h1 {
