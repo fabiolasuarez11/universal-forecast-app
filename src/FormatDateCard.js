@@ -37,8 +37,6 @@ export default function FormatDateCard(props) {
 	}
 	const yearMonth = yearMonths[props.date.getMonth()];
 
-	console.log(props.date.getDay());
-
 	return (
 		<span className="m-0">
 			{day} {hours}:{minutes}, {yearMonth} {props.date.getDate()},{' '}

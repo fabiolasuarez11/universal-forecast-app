@@ -9,11 +9,8 @@ export default function Header(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
 
 	function handleSubmit(event) {
-		// event.preventDefault();
-		const apiKey = '7ced214993840d6e67dd8feafce2738d';
-		const unit = 'imperial';
-		const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-		axios.get(apiUrl).then(handleResponse);
+		event.preventDefault();
+		handleSearch();
 	}
 
 	function handleResponse(response) {
@@ -30,6 +27,13 @@ export default function Header(props) {
 			humidity: response.data.main.humidity,
 			wind: Math.round(response.data.wind.speed),
 		});
+	}
+
+	function handleSearch() {
+		const apiKey = '7ced214993840d6e67dd8feafce2738d';
+		const unit = 'imperial';
+		const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+		axios.get(apiUrl).then(handleResponse);
 	}
 
 	function handleCity(event) {
@@ -51,12 +55,12 @@ export default function Header(props) {
 					</h1>
 					<form className="d-flex" role="search" onSubmit={handleSubmit}>
 						<input
-							className="form-control m-2"
+							className="form-control"
 							type="search"
 							placeholder="Search here city..."
 							aria-label="Search"
+							autoFocus="on"
 							onChange={handleCity}
-							id="form"
 						/>
 						<button
 							className="btn btn-secondary rounded-5 ms-3 p-3"
@@ -78,7 +82,7 @@ export default function Header(props) {
 			</div>
 		);
 	} else {
-		handleSubmit();
+		handleSearch();
 		return <div>Loading ...</div>;
 	}
 }
