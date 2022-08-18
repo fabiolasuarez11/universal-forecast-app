@@ -10,10 +10,6 @@ export default function Header(props) {
 
 	function handleSubmit(event) {
 		// event.preventDefault();
-		handleSearch();
-	}
-
-	function handleSearch() {
 		const apiKey = '7ced214993840d6e67dd8feafce2738d';
 		const unit = 'imperial';
 		const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
