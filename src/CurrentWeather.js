@@ -1,6 +1,7 @@
 import React from 'react';
 import FormatDateCard from './FormatDateCard';
 import FormatDate from './FormatDate';
+import WeatherIcon from './WeatherIcon';
 
 import './CurrentWeather.css';
 
@@ -40,12 +41,18 @@ export default function CurrentWeather(props) {
 							<span className="m-0 ms-3">{props.data.wind}</span> mph
 							<i className="fa-solid fa-wind m-0 p-2"></i>
 						</p>
-						<img
+						<WeatherIcon
+							iconWeather={props.data.icon}
+							alt={props.data.description}
+							color="#537791"
+							size={5}
+						/>
+						{/* <img
 							src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
 							alt={props.data.description}
 							id="icon"
 							className="ps-2 w-90"
-						/>
+						/> */}
 					</div>
 				</div>
 				<div className="card-footer border-0 p-3 m-0 rounded-5 text-center">
