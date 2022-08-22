@@ -1,50 +1,26 @@
 import React from 'react';
-import {
-	WiDaySunny,
-	WiDayCloudy,
-	WiCloud,
-	WiCloudy,
-	WiDayShowers,
-	WiDayRain,
-	WiDayThunderstorm,
-	WiDaySnow,
-	WiDayFog,
-	WiNightClear,
-	WiNightAltCloudy,
-	WiNightAltShowers,
-	WiNightAltRain,
-	WiNightAltThunderstorm,
-	WiNightAltSnow,
-	WiNightFog,
-} from 'react-icons/wi';
 
 export default function WeatherIcon(props) {
 	const mapCode = {
-		'01d': WiDaySunny,
-		'01n': WiNightClear,
-		'02d': WiDayCloudy,
-		'02n': WiNightAltCloudy,
-		'03d': WiCloud,
-		'03n': WiCloud,
-		'04d': WiCloudy,
-		'04n': WiCloudy,
-		'09d': WiDayShowers,
-		'09n': WiNightAltShowers,
-		'10d': WiDayRain,
-		'10n': WiNightAltRain,
-		'11d': WiDayThunderstorm,
-		'11n': WiNightAltThunderstorm,
-		'13d': WiDaySnow,
-		'13n': WiNightAltSnow,
-		'50d': WiDayFog,
-		'50n': WiNightFog,
+		'01d': 'public/images/clear-day.svg',
+		'01n': 'public/images/clear-night.svg',
+		'02d': 'public/images/partly-cloudy-day.svg',
+		'02n': 'public/images/partly-cloudy-night.svg',
+		'03d': 'public/images/overcast.svg',
+		'03n': 'public/images/overcast.svg',
+		'04d': 'public/images/overcast-day.svg',
+		'04n': 'public/images/overcast-night.svg',
+		'09d': 'public/images/overcast-day-drizzle.svg',
+		'09n': 'public/images/overcast-night-drizzle.svg',
+		'10d': 'public/images/overcast-day-rain.svg',
+		'10n': 'public/images/overcast-night-rain.svg',
+		'11d': 'public/images/thunderstorms-day-overcast-rain.svg',
+		'11n': 'public/images/thunderstorms-night-extreme-rain.svg',
+		'13d': 'public/images/overcast-day-snow.svg',
+		'13n': 'public/images/overcast-night-snow.svg',
+		'50d': 'public/images/overcast-day-fog.svg',
+		'50n': 'public/images/overcast-night-fog.svg',
 	};
 
-	return (
-		<span
-			className={mapCode[props.code]}
-			color={props.color}
-			size={props.size}
-		></span>
-	);
+	return <img src={mapCode[props.iconWeather]} />;
 }

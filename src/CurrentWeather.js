@@ -44,8 +44,6 @@ export default function CurrentWeather(props) {
 						<WeatherIcon
 							iconWeather={props.data.icon}
 							alt={props.data.description}
-							color="#537791"
-							size={5}
 						/>
 						{/* <img
 							src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
