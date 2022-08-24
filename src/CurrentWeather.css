@@ -4,7 +4,7 @@
 }
 
 .card {
-	background-color: #caf67e !important;
+	background-color: #bbbaf7 !important;
 }
 
 .card-header,
@@ -22,17 +22,17 @@
 
 .card-header,
 .card-footer {
-	background-color: #afc5ff !important;
+	background-color: #cef9b3 !important;
 	font-size: 24px;
 }
 
 .fa-droplet {
-	color: #0c9cee;
+	color: #3e4a61;
 	font-size: 20px;
 }
 
 .fa-wind {
-	color: #537791;
+	color: #3e4a61;
 	font-size: 20px;
 }
 

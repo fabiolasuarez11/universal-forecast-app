@@ -1,26 +1,42 @@
 import React from 'react';
+import cloudy from '@bybas/weather-icons/design/fill/animation-ready/cloudy.svg';
+import clearDay from '@bybas/weather-icons/design/fill/animation-ready/clear-day.svg';
+import clearNight from '@bybas/weather-icons/design/fill/animation-ready/clear-night.svg';
+import partlyCloudyDay from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-day.svg';
+import partlyCloudyNight from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-night.svg';
+import rain from '@bybas/weather-icons/design/fill/animation-ready/rain.svg';
+import partlyCloudyDayRain from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-day-rain.svg';
+import partlyCloudyNightRain from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-night-rain.svg';
+import partlyCloudyDaySnow from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-day-snow.svg';
+import partlyCloudyNightSnow from '@bybas/weather-icons/design/fill/animation-ready/partly-cloudy-night-snow.svg';
+import thunderstorms from '@bybas/weather-icons/design/fill/animation-ready/thunderstorms.svg';
+import mist from '@bybas/weather-icons/design/fill/animation-ready/mist.svg';
 
 export default function WeatherIcon(props) {
-	const mapCode = {
-		'01d': 'public/images/clear-day.svg',
-		'01n': 'public/images/clear-night.svg',
-		'02d': 'public/images/partly-cloudy-day.svg',
-		'02n': 'public/images/partly-cloudy-night.svg',
-		'03d': 'public/images/overcast.svg',
-		'03n': 'public/images/overcast.svg',
-		'04d': 'public/images/overcast-day.svg',
-		'04n': 'public/images/overcast-night.svg',
-		'09d': 'public/images/overcast-day-drizzle.svg',
-		'09n': 'public/images/overcast-night-drizzle.svg',
-		'10d': 'public/images/overcast-day-rain.svg',
-		'10n': 'public/images/overcast-night-rain.svg',
-		'11d': 'public/images/thunderstorms-day-overcast-rain.svg',
-		'11n': 'public/images/thunderstorms-night-extreme-rain.svg',
-		'13d': 'public/images/overcast-day-snow.svg',
-		'13n': 'public/images/overcast-night-snow.svg',
-		'50d': 'public/images/overcast-day-fog.svg',
-		'50n': 'public/images/overcast-night-fog.svg',
+	const weatherIcons = {
+		'01d': clearDay,
+		'01n': clearNight,
+		'02d': partlyCloudyDay,
+		'02n': partlyCloudyNight,
+		'03d': cloudy,
+		'03n': cloudy,
+		'04d': cloudy,
+		'04n': cloudy,
+		'09d': rain,
+		'09n': rain,
+		'10d': partlyCloudyDayRain,
+		'10n': partlyCloudyNightRain,
+		'11d': thunderstorms,
+		'11n': thunderstorms,
+		'13d': partlyCloudyDaySnow,
+		'13n': partlyCloudyNightSnow,
+		'50d': mist,
+		'50n': mist,
 	};
 
-	return <img src={mapCode[props.iconWeather]} />;
+	return (
+		<div className="WeatherIcon">
+			<img src={weatherIcons[props.icon]} alt={props.alt} width={props.width} />
+		</div>
+	);
 }
