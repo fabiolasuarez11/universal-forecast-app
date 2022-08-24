@@ -4,7 +4,7 @@
 }
 
 .card {
-	background-color: #bbbaf7 !important;
+	background-color: #cbcafc !important;
 }
 
 .card-header,
@@ -26,17 +26,34 @@
 	font-size: 24px;
 }
 
+.fa-temperature-empty,
+.fa-temperature-full {
+	color: #dd06fa;
+}
+
 .fa-droplet {
-	color: #3e4a61;
+	color: #0c9cee;
 	font-size: 20px;
 }
 
 .fa-wind {
-	color: #3e4a61;
+	color: #fd8a2c;
 	font-size: 20px;
 }
 
 .alerts {
 	color: #3e4a61;
 	text-decoration: none;
+}
+
+.tempUnit {
+	color: #3e4a61;
+	font-weight: bolder;
+	text-decoration: none !important;
+}
+
+.tempUnit:hover {
+	color: #0c9cee;
+	font-weight: bolder;
+	text-decoration: none !important;
 }

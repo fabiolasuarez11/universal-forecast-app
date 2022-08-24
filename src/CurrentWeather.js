@@ -2,8 +2,10 @@ import React from 'react';
 import FormatDateCard from './FormatDateCard';
 import FormatDate from './FormatDate';
 import WeatherIcon from './WeatherIcon';
+import Temperature from './Temperature';
 
 import './CurrentWeather.css';
+// import MaxMinTemperature from './MaxMinTemperature';
 
 export default function CurrentWeather(props) {
 	return (
@@ -16,8 +18,7 @@ export default function CurrentWeather(props) {
 					<div className="col col-md-6 m-0 p-0">
 						<p className="main-today pt-4">{props.data.city}</p>
 						<p className="main-today">
-							<strong className="m-0">{props.data.temperature}</strong>
-							<strong>°F</strong>
+							<Temperature fahrenheit={props.data.temperature} />
 						</p>
 						<p className="main-today pt-4">Last updated:</p>
 						<FormatDate date={props.data.date} />
@@ -28,8 +29,15 @@ export default function CurrentWeather(props) {
 					</div>
 					<div className="col col-md-6 m-0 p-0">
 						<p className="main-today pt-4">
-							Max <span className="m-0 ms-1">{props.data.maxTemp}</span>° • Min{' '}
-							<span className="m-0 ms-1">{props.data.minTemp}</span>°
+							{/* <MaxMinTemperature
+								fahrenheit={props.data.temperature}
+								maxTemp={props.data.maxTemp}
+								minTemp={props.data.minTemp}
+							/> */}
+							Max <span className="m-0 ms-1">{props.data.maxTemp}</span>°{' '}
+							<i className="fa-solid fa-temperature-full m-1"></i> • Min{' '}
+							<span className="m-0 ms-1">{props.data.minTemp}</span>°{' '}
+							<i className="fa-solid fa-temperature-empty m-1"></i>
 						</p>
 						<p className="main-today pt-4">
 							Humidity:
@@ -46,12 +54,6 @@ export default function CurrentWeather(props) {
 							alt={props.data.description}
 							width={80}
 						/>
-						{/* <img
-							src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
-							alt={props.data.description}
-							id="icon"
-							className="ps-2 w-60"
-						/> */}
 					</div>
 				</div>
 				<div className="card-footer border-0 p-3 m-0 rounded-5 text-center">
