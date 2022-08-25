@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import CurrentWeather from './CurrentWeather';
+import DailyForecast from './DailyForecast';
 import Footer from './Footer';
 
 import './UniversalForecastApp.css';
@@ -43,7 +44,7 @@ export default function UniversalForecastApp(props) {
 
 	if (weatherData.ready) {
 		return (
-			<div className="Header">
+			<div className="UniversalForecastApp">
 				<div className="container-fluid py-4 mb-4 rounded-5 main-header">
 					<h1 className="display-5 fw-bold text-center">
 						<span role="img" aria-label="world-emoji">
@@ -80,6 +81,7 @@ export default function UniversalForecastApp(props) {
 					</form>
 				</div>
 				<CurrentWeather data={weatherData} />
+				<DailyForecast coordinates={weatherData.coordinates} />
 				<Footer />
 			</div>
 		);

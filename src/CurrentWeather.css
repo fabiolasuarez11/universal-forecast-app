@@ -1,5 +1,6 @@
-.CurrentWeather {
-	max-width: 750px;
+.CurrentWeather,
+.card {
+	max-width: 800px;
 	margin: auto;
 }
 

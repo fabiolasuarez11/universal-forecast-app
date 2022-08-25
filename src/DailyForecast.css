@@ -1,5 +1,6 @@
-.DailyForecast {
-	max-width: 750px;
+.DailyForecast,
+.card {
+	max-width: 800px;
 	margin: auto;
 }
 
