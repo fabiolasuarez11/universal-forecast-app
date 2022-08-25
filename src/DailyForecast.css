@@ -1,5 +1,10 @@
+.DailyForecast {
+	max-width: 750px;
+	margin: auto;
+}
+
 .card {
-	background-color: #caf67e !important;
+	background-color: #cbcafc !important;
 }
 
 .card-header,

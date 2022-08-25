@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import CurrentWeather from './CurrentWeather';
+import Footer from './Footer';
 
-import './Header.css';
+import './UniversalForecastApp.css';
 
-export default function Header(props) {
+export default function UniversalForecastApp(props) {
 	const [city, setCity] = useState(props.defaultCity);
 	const [weatherData, setWeatherData] = useState({ ready: false });
 
@@ -79,6 +80,7 @@ export default function Header(props) {
 					</form>
 				</div>
 				<CurrentWeather data={weatherData} />
+				<Footer />
 			</div>
 		);
 	} else {

@@ -20,10 +20,10 @@ export default function Temperature(props) {
 	if (unit === 'fahrenheit') {
 		return (
 			<React.Fragment>
-				<span className="m-0">{props.fahrenheit}</span>
+				<span className="m-0 ps-5 text-center">{props.fahrenheit}</span>
 				<span>
 					°F |{' '}
-					<a href="/" className="tempUnit" onClick={displayCelsius}>
+					<a href="/" className="tempUnit text-center" onClick={displayCelsius}>
 						°C
 					</a>
 				</span>
@@ -32,9 +32,13 @@ export default function Temperature(props) {
 	} else {
 		return (
 			<React.Fragment>
-				<span className="m-0">{Math.round(celsius())}</span>
+				<span className="m-0 ps-5 text-center">{Math.round(celsius())}</span>
 				<span>
-					<a href="/" className="tempUnit" onClick={displayFahrenheit}>
+					<a
+						href="/"
+						className="tempUnit text-center"
+						onClick={displayFahrenheit}
+					>
 						°F
 					</a>{' '}
 					| °C

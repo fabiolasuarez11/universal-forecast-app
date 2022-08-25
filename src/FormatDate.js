@@ -22,8 +22,10 @@ export default function FormatDate(props) {
 	}
 
 	return (
-		<span className="main-today m-0 pt-4">
-			{day} {hours}:{minutes}
-		</span>
+		<React.Fragment>
+			<p className="main-today m-0 pt-4 text-center">
+				{day} {hours}:{minutes}
+			</p>
+		</React.Fragment>
 	);
 }

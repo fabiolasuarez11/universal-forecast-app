@@ -1,13 +1,11 @@
-import Header from './Header';
-import Footer from './Footer';
+import UniversalForecastApp from './UniversalForecastApp';
 
 import './App.css';
 
 function App() {
 	return (
 		<div className="App">
-			<Header defaultCity="Salt Lake City" />
-			<Footer />
+			<UniversalForecastApp defaultCity="Salt Lake City" />
 		</div>
 	);
 }

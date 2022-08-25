@@ -16,14 +16,13 @@ export default function CurrentWeather(props) {
 				</div>
 				<div className="row">
 					<div className="col col-md-6 m-0 p-0">
-						<p className="main-today pt-4">{props.data.city}</p>
-						<p className="main-today">
+						<p className="main-today pt-4 text-center">{props.data.city}</p>
+						<p className="main-today text-center">
 							<Temperature fahrenheit={props.data.temperature} />
 						</p>
-						<p className="main-today pt-4">Last updated:</p>
+						<p className="main-today pt-4 text-center">Last updated:</p>
 						<FormatDate date={props.data.date} />
-						<br />
-						<p className="main-today pt-5 text-capitalize" id="description">
+						<p className="main-today pt-5 text-capitalize text-center">
 							{props.data.description}
 						</p>
 					</div>
