@@ -87,6 +87,6 @@ export default function UniversalForecastApp(props) {
 		);
 	} else {
 		handleSearch();
-		return <div>Loading ...</div>;
+		return null;
 	}
 }
