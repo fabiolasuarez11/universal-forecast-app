@@ -59,7 +59,7 @@ export default function UniversalForecastApp(props) {
 		return (
 			<div className="UniversalForecastApp">
 				<div className="container-fluid py-4 mb-4 rounded-5 main-header">
-					<h1 className="display-5 fw-bold text-center main-header">
+					<h1 className="display-5 fw-bold text-center mobile-header">
 						<span role="img" aria-label="world-emoji">
 							🌎
 						</span>

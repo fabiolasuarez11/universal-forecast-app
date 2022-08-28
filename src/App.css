@@ -10,7 +10,7 @@
 	}
 
 	h5,
-	.main-header,
+	.mobile-header,
 	.card-header,
 	.card-footer,
 	.main-today,
@@ -19,6 +19,10 @@
 	.main-footer {
 		font-size: 14px;
 		font-weight: 100;
+	}
+
+	.mobile-header {
+		margin-bottom: 10px;
 	}
 
 	.btn-secondary {
