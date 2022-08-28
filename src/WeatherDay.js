@@ -3,15 +3,7 @@ import WeatherIcon from './WeatherIcon';
 
 export default function WeatherDay(props) {
 	function date() {
-		const weekDays = [
-			'Sunday',
-			'Monday',
-			'Tuesday',
-			'Wednesday',
-			'Thursday',
-			'Friday',
-			'Saturday',
-		];
+		const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		const date = new Date(props.data.dt * 1000);
 		const currentDate = weekDays[date.getDay()];
 		return currentDate;

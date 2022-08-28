@@ -81,7 +81,10 @@ export default function UniversalForecastApp(props) {
 					</form>
 				</div>
 				<CurrentWeather data={weatherData} />
-				<DailyForecast coordinates={weatherData.coordinates} />
+				<DailyForecast
+					coordinates={weatherData.coordinates}
+					city={weatherData.city}
+				/>
 				<Footer />
 			</div>
 		);
