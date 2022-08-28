@@ -19,6 +19,7 @@
 	color: #3e4a61;
 	font-family: 'Sarala', sans-serif;
 	font-size: 18px;
+	font-weight: bold;
 }
 
 .card-header,
@@ -27,6 +28,7 @@
 	font-size: 24px;
 }
 
+.fa-temperature-half,
 .fa-temperature-empty,
 .fa-temperature-full {
 	color: #dd06fa;

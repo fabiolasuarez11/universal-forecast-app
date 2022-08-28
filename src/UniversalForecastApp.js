@@ -42,11 +42,24 @@ export default function UniversalForecastApp(props) {
 		setCity(event.target.value);
 	}
 
+	function handleCurrentLocation(event) {
+		setCity(event.target.value);
+		function handlePosition(position) {
+			const lat = position.coords.latitude;
+			const lon = position.coords.longitude;
+			const apiKey = '7ced214993840d6e67dd8feafce2738d';
+			const unit = 'imperial';
+			const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+			axios.get(apiUrl).then(handleResponse);
+		}
+		navigator.geolocation.getCurrentPosition(handlePosition);
+	}
+
 	if (weatherData.ready) {
 		return (
 			<div className="UniversalForecastApp">
 				<div className="container-fluid py-4 mb-4 rounded-5 main-header">
-					<h1 className="display-5 fw-bold text-center">
+					<h1 className="display-5 fw-bold text-center main-header">
 						<span role="img" aria-label="world-emoji">
 							🌎
 						</span>
@@ -75,6 +88,7 @@ export default function UniversalForecastApp(props) {
 							className="btn btn-secondary rounded-5 ms-3"
 							type="submit"
 							value="Current"
+							onClick={handleCurrentLocation}
 						>
 							Current Location
 						</button>

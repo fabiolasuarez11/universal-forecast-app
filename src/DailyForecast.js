@@ -44,6 +44,8 @@ export default function DailyForecast(props) {
 										<WeatherDay data={forecastData} />
 									</div>
 								);
+							} else {
+								return null;
 							}
 						})}
 					</div>
@@ -59,6 +61,8 @@ export default function DailyForecast(props) {
 										<WeatherDay data={forecastData} />
 									</div>
 								);
+							} else {
+								return null;
 							}
 						})}
 					</div>
